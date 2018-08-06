@@ -2,31 +2,209 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Open Graph Metadata -->
+
+ <meta property="og:title" content="Facebook T-Shirt">
+
+ <meta property="og:description" content="Unisex Facebook T-shirt, Small">
+
+ <meta property="og:url" content="https://example.org/facebook">
+
+ <meta property="og:image" content="https://example.org/facebook.jpg">
+
+ <meta property="product:brand" content="Facebook">
+
+ <meta property="product:availability" content="in stock">
+
+ <meta property="product:condition" content="new">
+
+ <meta property="product:price:amount" content="9.99">
+
+ <meta property="product:price:currency" content="USD">
+
+ <meta property="product:retailer_item_id" content="facebook_tshirt_001">
+
+<!-- End Open Graph Metadata -->
     <title>Sample pixel page</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/pricing/pricing.css" >
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Facebook Pixel Code -->
     <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '193292231262780', {
-    em: 'thisisemail@email.com',
-    fn: 'Firstname',
-    ln: 'Lastname',
-  });
-  fbq('track', 'PageView');
-</script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '411095939357304');
+      fbq('track', 'PageView');
+
+      fbq('track', 'Purchase', {
+value: 119000,
+currency: 'KRW',
+content_ids: 'B28156',
+content_type: 'product ',
+});
+    </script>
     <noscript><img height="1" width="1" style="display:none"
                    src="https://www.facebook.com/tr?id=193292231262780&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
 
+
 </head>
 <body>
-This is sample page for pixel.
+  <!-- reference URL : https://developers.facebook.com/docs/facebook-pixel -->
+      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Pixel Sample</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+          <a class="p-2 text-dark" href="https://chrome.google.com/webstore/detail/facebook-pixel-helper/fdgfkebogiimcoedlicjlajpkdmockpc" target="_blank">Pixel Helper</a>
+          <a class="p-2 text-dark" href="https://www.facebook.com/analytics/193292231262780" target="_blank">Analytics</a>
+          <!--<a class="p-2 text-dark" href="#">Support</a>
+          <a class="p-2 text-dark" href="#">Pricing</a> -->
+        </nav>
+        <!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->
+      </div>
+
+      <!-- <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center"> -->
+        <!-- <h1 class="display-4">Pricing</h1> -->
+        <!-- <p class="lead">Init</p> -->
+      <!-- </div> -->
+
+      <div class="container">
+         <div class="form-group">
+           <div class="input-group mb-3">
+             <input type="text" class="form-control" placeholder="Enter Pixel Id" >
+             <div class="input-group-append">
+               <button class="btn btn-outline-secondary" type="button" onClick="onInitClick()">Init</button>
+             </div>
+           </div>
+
+
+         <p class="lead"><mark>Events</mark></p>
+         <select class="form-control form-control-lg">
+           <option>ViewContent</option>
+           <option>Search</option>
+           <option>AddToCart</option>
+           <option>AddToWishlist</option>
+           <option>InitiateCheckout</option>
+           <option>AddPaymentInfo</option>
+           <option>Purchase</option>
+           <option>Lead</option>
+           <option>CompleteRegistration</option>
+
+         </select>
+
+           <div class="form-group">
+             <label for="contentType">content_type</label>
+             <input class="form-control" id="contentType" placeholder="product">
+           </div>
+           <div class="form-group">
+             <label for="contentIds">content_ids</label>
+             <input class="form-control" id="contentIds" placeholder="['12347']">
+           </div>
+           <div class="form-group">
+             <label for="contentName">content_name</label>
+             <input class="form-control" id="contentName" placeholder="ABC Leather Sandal">
+           </div>
+           <button onClick="onViewContentClick()" class="btn btn-primary btn-sm">Submit</button>
+
+
+         <p class="lead"><mark>Search</mark></p>
+
+           <div class="form-group">
+             <label for="exampleInputEmail1">Pixel Id</label>
+             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+           </div>
+           <div class="form-group">
+             <label for="exampleInputPassword1">Password</label>
+             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+           </div>
+           <div class="form-check">
+             <input type="checkbox" class="form-check-input" id="exampleCheck1">
+             <label class="form-check-label" for="exampleCheck1">Check me out</label>
+           </div>
+           <button type="submit" class="btn btn-primary">Submit</button>
+
+      </div>
+
+
+<script>
+
+function onInitClick(){
+  // fbq('init',  $("#pixelId").val());
+  fbq('init', '1111111');
+  fbq('track', 'PageView');
+}
+function onViewContentClick() {
+  fbq('track', 'ViewContent', {
+      content_type: $("#contentType").val(),
+      content_ids: $("#contentIds").val(),
+      content_name: $("#contentName").val(),
+      content_category: 'Shoes',
+      value: '0.50',
+      currency: 'USD'
+      });
+};
+
+function onSearchClick() {
+  fbq('track', 'Search', {
+      search_string: 'awesome sendal',
+      content_ids: ['12347'],
+      content: 'ABC Leather Sandal',
+      content_category: 'Shoes',
+      value: '0.50',
+      currency: 'USD'
+      });
+};
+
+function onAddToCartClick() {
+  fbq('track', 'Search', {
+      content_type: 'product',
+      content_ids: ['12347'],
+      content_name: 'ABC Leather Sandal',
+      content_category: 'Shoes',
+      value: '0.50',
+      currency: 'USD'
+      });
+};
+
+function onPurchaseClick() {
+  fbq('track', 'Search', {
+      content_type: 'product',
+      content_ids: ['12347'],
+      content_name: 'ABC Leather Sandal',
+      content_category: 'Shoes',
+      contents: 'Red',
+      num_items: 1,
+      value: '0.50',
+      currency: 'USD'
+      });
+};
+
+function onLeadClick() {
+  fbq('track', 'Lead', {
+      content_name: 'ABC Leather Sandal',
+      content_category: 'Shoes',
+      value: '0.50',
+      currency: 'USD'
+      });
+};
+
+function onTrackCustomClick() {
+  fbq('trackCustom', 'Cheese', {
+      product: 'bluecheese'
+      });
+};
+</script>
+
+
 </body>
 </html>
