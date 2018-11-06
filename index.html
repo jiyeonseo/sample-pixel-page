@@ -51,6 +51,20 @@ fbq('track', 'ViewContent', {
     value: '0.50',
     currency: 'USD'
     });
+        
+        fbq('track', 'Purchase', {
+    content_type: 'product',
+    contents: "[{\"id\":\"27035963779\",\"quantity\":1,\"item_price\":\"34.95\"}]",
+    value: '0.50',
+    currency: 'USD'
+    });
+        
+        fbq('track', 'AddToCart', {
+    content_type: 'product',
+    content_ids: "[1,2,3]",
+    value: '0.50',
+    currency: 'USD'
+    });
 
     </script>
     <noscript><img height="1" width="1" style="display:none"
