@@ -94,9 +94,15 @@ fbq('track', 'ViewContent', {
 
       <div class="container">
            <div class="form-group">
-             <label for="contentName">content_name</label>
-             <input class="form-control" id="contentName" placeholder="ABC Leather Sandal">
+             <label for="first_name">first name</label>
+             <input class="form-control" name="first_name" id="contentName" placeholder="ABC Leather Sandal">
+              <label for="last_name">last name</label>
+               <input  type="text" name="last_name" maxlength="80" size="30">  
+               <label for="email">eail</label>
+               <input  type="text" name="email" maxlength="80" size="30">  
+               
            </div>
+
            <button onClick="onViewContentClick()" class="btn btn-primary btn-sm">Submit</button>
       </div>
 <script>
