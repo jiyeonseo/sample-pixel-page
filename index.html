@@ -93,64 +93,12 @@ fbq('track', 'ViewContent', {
       <!-- </div> -->
 
       <div class="container">
-         <div class="form-group">
-           <div class="input-group mb-3">
-             <input type="text" class="form-control" placeholder="Enter Pixel Id" >
-             <div class="input-group-append">
-               <button class="btn btn-outline-secondary" type="button" onClick="onInitClick()">Init</button>
-             </div>
-           </div>
-
-
-         <p class="lead"><mark>Events</mark></p>
-         <select class="form-control form-control-lg">
-           <option>ViewContent</option>
-           <option>Search</option>
-           <option>AddToCart</option>
-           <option>AddToWishlist</option>
-           <option>InitiateCheckout</option>
-           <option>AddPaymentInfo</option>
-           <option>Purchase</option>
-           <option>Lead</option>
-           <option>CompleteRegistration</option>
-
-         </select>
-
-           <div class="form-group">
-             <label for="contentType">content_type</label>
-             <input class="form-control" id="contentType" placeholder="product">
-           </div>
-           <div class="form-group">
-             <label for="contentIds">content_ids</label>
-             <input class="form-control" id="contentIds" placeholder="['12347']">
-           </div>
            <div class="form-group">
              <label for="contentName">content_name</label>
              <input class="form-control" id="contentName" placeholder="ABC Leather Sandal">
            </div>
            <button onClick="onViewContentClick()" class="btn btn-primary btn-sm">Submit</button>
-
-
-         <p class="lead"><mark>Search</mark></p>
-
-           <div class="form-group">
-             <label for="exampleInputEmail1">Pixel Id</label>
-             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-           </div>
-           <div class="form-group">
-             <label for="exampleInputPassword1">Password</label>
-             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-           </div>
-           <div class="form-check">
-             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-             <label class="form-check-label" for="exampleCheck1">Check me out</label>
-           </div>
-           <button type="submit" class="btn btn-primary">Submit</button>
-
       </div>
-
-
 <script>
 
 function onInitClick(){
